@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Easy CheckOut</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- <script src="PublicSslCommerzPayment.js"></script> -->
+</head>
+<body>
+	<div class="container" style="margin-top: 12%;">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-primary">
+				<div class="panel-heading">PAY BY SSLCOMMERZ</div>
+				<div class="panel-body">
+					<!-- Your Token ID -->
+					<!-- Your Order ID -->
+					<h5>Click Below Button For Payment With Our New V4 API(Easy Check Out)</h5><hr>
+					<button class="btn btn-danger" id="sslczPayBtn"
+						token="5e3bb098679e95e3bb098679f35e3bb098679fc"
+						postdata=""
+						order="aaasdaw"
+						endpoint="http://localhost:3000/test"
+						> Confirm
+					</button>
+					<br><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		//----------------- This is for live environment -----------------------
+
+		// (function (window, document) {
+		// 	var loader = function () {
+		// 		var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+		// 		script.src = "https://seamless-epay.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+		// 		tag.parentNode.insertBefore(script, tag);
+		// 	};
+
+		// 	window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+		// })(window, document);
+		// ---------------------------------------------------------------------
+
+		(function (window, document) {
+            console.log("++++++++++++++++++")
+			var loader = function () {
+			    var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+			    script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+			    tag.parentNode.insertBefore(script, tag);
+			};
+
+			window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+		})(window, document);
+	
+	</script>
+
+
+</body>
+</html>
